@@ -1,0 +1,12 @@
+{
+    "name": "ai-mental-health-screening-root",
+    "private": true,
+    "scripts": {
+        "install-client": "cd client && npm install",
+        "install-server": "cd server && npm install",
+        "build-client": "cd client && npm run build",
+        "start-server": "cd server && npm start",
+        "render-build": "npm install && npm run install-client && npm run build-client && npm run install-server",
+        "start": "npm run start-server"
+    }
+}
