@@ -1,10 +1,12 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const path = require('path');
 
+const storagePath = process.env.DATABASE_PATH || path.join(__dirname, 'database.sqlite');
+
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: path.join(__dirname, '..', 'database', 'database.sqlite'),
-    logging: console.log // Enable logging to see what's happening
+    storage: storagePath,
+    logging: false
 });
 
 // Define SurveyResult model
